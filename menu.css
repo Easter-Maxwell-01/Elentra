@@ -1,0 +1,135 @@
+
+
+/* website navigation */
+.main-nav  
+{
+    padding: 1.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+}
+.site-nav 
+{
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    letter-spacing: 1px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    box-shadow: 0 0 0 0.5px #ccc;
+}
+
+.site-nav a 
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.site-nav .logo 
+{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.site-nav img, .mobile-nav img  
+{
+    width: 35px;
+    height: 30px;
+}
+
+/* sections */
+.site-nav section 
+{
+    height: 80px;
+    display: flex;
+    border-right: 1px solid #6f6b6b;
+}
+
+.site-nav section:nth-child(1){
+    padding: 0 2em;
+    width: 20%;
+    align-items: center;
+}
+.site-nav section:nth-child(2){
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+.site-nav section:nth-child(3){
+    width: 20%;
+    align-items: center;
+    justify-content: right;
+    padding: 0 2em;
+    border-right: none;
+}
+
+
+/* mobile nav */
+.mobile-nav 
+{
+    z-index: 999;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1a1d1f;
+    overflow: hidden;
+    padding: 1.5em 0;  
+    animation: slide-in 1s ease-in-out;
+}
+.mobile-nav header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* navigation links */
+.nav-links section ul 
+{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.nav-links section ul li 
+{
+    list-style: none;
+    display: flex;
+    border-bottom: 1px solid #555454;
+    width: 90%;
+    padding: 1em 0;
+    justify-content: space-between;
+}
+
+.nav-links section ul li a 
+{
+    color: #fff;
+    font-size: .9rem;
+    font-family: 'Cinzel';
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: oblique;
+}
+.nav-links section ul span 
+{
+    font-size: 1.4rem;
+    font-family: 'Cinzel';
+    font-weight: bolder;
+    color: #fff;
+}
+
+
+

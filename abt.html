@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- site config -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- site titel -->
+        <title> E L E N T R A - A B O U T </title>
+
+        <!-- css files -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="resp.css">
+        <link rel="stylesheet" href="anim.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+         <!-- custom cursor -->
+         <div class='cursor'></div>
+         <div class='cursor second-cursor'></div>
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="progress-container">
+                <div class="progress" id="progress">0%</div>
+            </div>
+        </div>
+
+        <!-- bg cover -->
+        <section class="bg-cover">
+            <!-- main nav -->
+            <nav class="main-nav">
+                <div class="site-nav">
+                    <section>
+                        <a href=""> Reels </a>
+                    </section>
+    
+                    <section>
+                        <h1 class="logo"> Elentra </h1>
+                    </section>
+    
+                    <section>
+                        <img src="assets/w-open.png" onclick=show_mobile_nav()>
+                    </section>
+                </div>
+            </nav>
+
+            <!-- mobile nav -->
+            <nav class="mobile-nav">
+                <header>
+                    <div class="site-nav">
+                        <section>
+                            <a href=""> Reels </a>
+                        </section>
+        
+                        <section>
+                            <h1 class="logo"> Elentra </h1>
+                        </section>
+        
+                        <section>
+                            <img src="assets/w-close.png" onclick=hide_mobile_nav()>
+                        </section>
+                    </div>
+                </header>
+                <div class="nav-links">
+                    <section>
+                        <ul>
+                            <li> 
+                                <a href="index.html"> Home </a> <span> 01 </span>
+                            </li>
+                            <li> 
+                                <a href="abt.html"> About </a> <span> 02 </span>
+                            </li>
+                            <li>
+                                <a href="esp.html"> Spain  </a> <span> 03 </span>
+                            </li>
+                            <li>
+                                <a href="esp.html"> Italy  </a> <span> 04 </span>
+                            </li>
+                            <li> 
+                                <a href=""> Contact </a> <span> 05 </span>
+                             </li>    
+                        </ul>
+                    </section>
+                </div>
+            </nav>
+
+            <div class="main-txt">
+                <h2 class="drop-in-1"> Modelling Haven </h2>
+                <span></span>
+            </div>
+        </section>
+
+        <!-- min-gallery -->
+        <div class="gallery">
+            <p> 
+                We don't stop at our past, we love new work <br>
+                We like what we're doing tomorrow
+            </p>
+
+            <div class="row">
+                <div class="col col-1">
+                    <img src="assets/gal-dp (1).jpg" alt="">
+                </div>
+                <div class="col col-2">
+                    <img src="assets/gal-dp (2).jpg" alt="">
+                </div>
+                <div class="col col-3">
+                    <img src="assets/gal-dp (3).jpg" alt="">
+                </div>
+                <div class="col col-4">
+                    <img src="assets/gal-dp (4).jpg" alt="">
+                </div>
+                <div class="col col-5">
+                    <img src="assets/gal-dp (5).jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- bio -->
+        <section class="bio">
+            <h2> Made to dominate the runway </h2>
+            <div class="write-up">
+                <p>
+                    Based in the vibrant heart of London, Elentra stands as a pinnacle of excellence in the modeling industry, <br class="br">
+                    embodying sophistication, diversity, and unparalleled talent. With a roster of 25 exceptional models, Elentra <br class="br">
+                    curates experiences that transcend conventional standards, fostering collaborations with 12 esteemed <br class="br">
+                    fashion brands to shape the future of the fashion landscape.
+                    <br><br>
+                    At Elentra, we believe in the transformative power of diversity, embracing individuals from all walks of life, <br class="br">
+                    backgrounds, and cultures. Our agency serves as a platform for these diverse voices, empowering each model <br class="br">
+                    to shine authentically and break barriers in the fashion industry. 
+                    <br><br>
+                    Our collaborative ethos extends beyond the confines of our London headquarters, as we embark on four annual <br class="br">
+                    tours to Italy, the epicenter of global fashion. These immersive experiences not only showcase the unparalleled <br class="br">
+                    talent of our models but also foster meaningful connections with international designers and industry insiders.
+                </p>
+            </div>
+        </section>
+
+        <!-- image slider -->
+        <section class="image-slider">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="cont" data-index="1">
+                        <img src="assets/abt-1.jpeg" id="slide-1">
+                        <div class="slide-title"></div>
+                    </div>
+                    <div class="cont" data-index="2">
+                        <img src="assets/abt-2.jpg" id="slide-2">
+                        <div class="slide-title"></div> 
+                    </div>
+                    <div class="cont" data-index="3">
+                        <img src="assets/abt-3.jpeg" id="slide-3">
+                        <div class="slide-title"></div>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            /* image slider */
+            window.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slider .cont');
+
+            slides.forEach((slide, index) => {
+                const slideIndex = index + 1;
+                const totalSlides = slides.length;
+                const slideTitle = slide.querySelector('.slide-title');
+                slideTitle.textContent = `${formatIndex(slideIndex)} - ${formatIndex(totalSlides)}`;
+            });
+
+            function formatIndex(index) {
+                return index.toString().padStart(2, '0'); // Pads the index with leading zeros if necessary
+            }  
+            });
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

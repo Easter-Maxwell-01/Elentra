@@ -1,0 +1,81 @@
+
+/* website navigation */
+@keyframes slide-in
+{
+    0% 
+    {
+        transform: translateY(-100%);
+    }
+
+    100% 
+    {
+        opacity: 1;
+        transform: translatedY(100%);
+    }
+}
+
+/* preloader */
+@keyframes move {
+    30% {
+        transform: translate(var(--x), var(--move-y));
+    }
+    82% {
+        transform: translate(var(--x), var(--move-y-s));
+    }
+}
+
+
+/* text carousel */
+@keyframes marquee {
+    from {
+        transform: translateX(0%)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes marquee_2 {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
+
+
+/* tour carousel */
+@keyframes runningTime
+{
+    from{ width: 100%}
+    to{width: 0}
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+/* header text drop-in animation */
+.drop-in-1 
+{
+    animation: drop-in 5s ease 200ms backwards;
+}
+@keyframes drop-in
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+   

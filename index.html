@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- site config -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- site titel -->
+        <title> E L E N T R A </title>
+
+        <!-- css files -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="resp.css">
+        <link rel="stylesheet" href="anim.css">
+        
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <!-- custom cursor -->
+        <div class='cursor'></div>
+        <div class='cursor second-cursor'></div>
+
+        <!-- site loader -->
+        <div class="loader">
+            <div class="loading"> Elentra </div>
+        </div>
+
+        <!-- home -->
+        <section class="bg" id="home">
+            <!-- page overlay -->
+            <div class="overlay"></div>
+
+            <!-- main nav -->
+            <nav class="main-nav">
+                <div class="site-nav">
+                    <section>
+                        <a href=""> Reels </a>
+                    </section>
+    
+                    <section>
+                        <h1 class="logo"> Elentra </h1>
+                    </section>
+    
+                    <section>
+                        <img src="assets/w-open.png" onclick=show_mobile_nav()>
+                    </section>
+                </div>
+            </nav>
+
+            <!-- mobile nav -->
+            <nav class="mobile-nav">
+                <header>
+                    <div class="site-nav">
+                        <section>
+                            <a href=""> Reels </a>
+                        </section>
+        
+                        <section>
+                            <h1 class="logo"> Elentra </h1>
+                        </section>
+        
+                        <section>
+                            <img src="assets/w-close.png" onclick=hide_mobile_nav()>
+                        </section>
+                    </div>
+                </header>
+                <div class="nav-links">
+                    <section>
+                        <ul>
+                            <li> 
+                                <a href="index.html"> Home </a> <span> 01 </span>
+                            </li>
+                            <li> 
+                                <a href="abt.html"> About </a> <span> 02 </span>
+                            </li>
+                            <li>
+                                <a href="esp.html"> Spain  </a> <span> 03 </span>
+                            </li>
+                            <li>
+                                <a href="esp.html"> Italy  </a> <span> 04 </span>
+                            </li>
+                            <li> 
+                                <a href=""> Contact </a> <span> 05 </span>
+                             </li>    
+                        </ul>
+                    </section>
+                </div>
+            </nav>
+
+            <!-- text carousel -->
+            <div class="wrap">
+                <div class="text-carousel">
+                    <p>
+                        Modelling Agency<span>.</span>
+                        Modelling Agency<span>.</span>
+                        Modelling Agency<span>.</span>
+                        Modelling Agency<span>.</span>
+                    </p>
+                </div>
+            
+                <div class="text-carousel carousel-2">
+                    <p>
+                        Based in London<span>.</span>
+                        Based in London<span>.</span>
+                        Based in London<span>.</span>
+                        Based in London<span></span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- social media links -->
+            <div class="socials">
+                <a href=""> Facebook </a>
+                <hr class="hr-1">
+                <span></span>
+                <a href=""> Instagram </a>
+                <hr class="hr-2">
+            </div>
+        </section>
+
+        <!-- about -->
+        <section class="about">
+            <div class="row">
+                <div class="col col-1">
+                    <p> Made to dominate the runway </p>
+                </div>
+                <div class="col col-2">
+                    <div class="cont">
+                        <img src="assets/dp-1.jpg" alt="">
+                        <figcaption> 01 </figcaption>
+                    </div>
+                    <div class="cont">
+                        <img src="assets/dp-2.jpg" alt="">
+                        <figcaption> 02 </figcaption>
+                    </div>
+                </div>
+                <div class="col col-3"></div>
+            </div>
+        </section>
+
+        <!-- tour -->
+        <section class="tour" id="tours">
+            <div class="row">
+                <div class="col col-1">
+                    <img id="slide1" src="assets/dp-1.jpg">
+                    <div class="location">
+                        <p> Spain </p>
+                    </div>
+                    <div class="link link-1">
+                        <a href="esp.html">
+                            <img src="assets/up-right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <img id="slide2" src="assets/tour-dp-1.jpg">
+                    <div class="location">
+                        <p> Italy </p>
+                    </div>
+                    <div class="link link-2">
+                        <a href="Ita.html">
+                            <img src="assets/up-right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="text">
+                        <p> Explore prestigious tours </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>

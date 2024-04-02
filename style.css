@@ -1,0 +1,950 @@
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar 
+{
+    display: none;
+}
+
+body 
+{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #141414;
+}
+html 
+{
+    cursor: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+/* content reveal */
+.reveal 
+{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.reveal.active
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* subpage loader */
+.preloader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: #111111;
+}
+
+.progress-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+}
+
+
+/* main site loader */
+.loader 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b0a0a;
+}
+
+.loading 
+{
+    --color: #F5F9FF;
+    --duration: 2000ms;
+    font: 500 1.6rem 'Montserrat';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+    user-select: none;
+    color: var(--color);
+    span {
+        --x: 0;
+        --y: 0;
+        --move-y: 0;
+        --move-y-s: 0;
+        --delay: 0ms;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        text-indent: calc(var(--x) * -1);
+        overflow: hidden;
+        transform: translate(var(--x), var(--y));
+    }
+    &.start {
+        div {
+            opacity: 0;
+        }
+        span {
+            animation: move var(--duration) ease-in-out var(--delay);
+        }
+    }
+}
+
+
+/* custom cursor */
+.cursor 
+{
+    z-index: 2;
+    position: fixed;
+    height: var(--circle);
+    width: var(--circle);
+    transform:scale(1);
+    border-radius: 50%;
+    transition: all 0.35s, top 0s, left 0s;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+  
+.cursor:first-child {
+    background-color: #fff;
+    --circle:9px
+}
+.cursor.second-cursor {
+    background-color: none;
+    border:1.5px solid #fff;
+    --circle:30px;
+}
+  
+.cursor:first-child.big{
+    --circle:60px;
+}
+.second-cursor.big { 
+    --circle:0px;
+    border-width:0px;
+}
+
+/* site fonts */
+@font-face 
+{
+    font-family: 'Cinzel';
+    src: url('fonts/Cinzel.ttf');
+}
+@font-face 
+{
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat.ttf');
+}
+@font-face 
+{
+    font-family: 'Recharge';
+    src: url('fonts/Recharge.otf');
+}
+@font-face 
+{
+    font-family: 'Kanit';
+    src: url('fonts/Kanit.ttf');
+}
+@font-face 
+{
+    font-family: 'Graflows';
+    src: url('fonts/Graflows.ttf');
+}
+
+/* background ( home ) */
+.bg 
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/14644494/pexels-photo-14644494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.overlay
+{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 1;
+    background-color: rgba(2, 5, 11, 0.4);
+}
+
+
+
+/* text carousel */
+.wrap 
+{
+    width: 100vw;
+    max-width: 100%;
+    position: absolute;
+    padding: 2em;
+    z-index: 5;
+    margin-top: 25vh;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.text-carousel 
+{
+    transform: skewX(5deg);
+    will-change: transform;
+}
+.carousel-2 
+{
+    transform: skewX(-4deg);
+    margin-top: 3vh;
+}
+
+.text-carousel p 
+{
+    color: #fff;
+    display: flex;
+    gap: 1em;
+    font-size: 4rem;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    animation-play-state: paused;
+    animation: marquee 15s infinite linear;
+}
+.carousel-2 p 
+{
+    font-family: 'Recharge';
+    color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px;
+    animation: marquee_2 17s infinite linear;
+}
+
+.text-carousel p span 
+{
+    margin-top: -.1em;
+    font-size: 3.5rem;
+}     
+
+
+
+/* socials */
+.socials 
+{
+    padding: 1em 2em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+
+.socials a 
+{
+    font-family: 'Montserrat';
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 3px;
+    transition: .5s;
+}
+.socials a:hover 
+{
+    color: #1d3d4f;
+    font-weight: 600;
+}
+
+.socials .hr-1{
+    margin-left: -11em;
+}
+.socials .hr-2{
+    margin-left: 10.5em;
+}
+
+.socials .hr-1, 
+.socials .hr-2 
+{
+    position: absolute;
+    margin-top: 10%;
+    height: 1px;
+    width: 110px;
+    background: #fff;
+    transform: scaleY(.1);
+}
+
+.socials span 
+{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: .5em;
+}
+
+
+
+/* about */
+.about 
+{
+    width: 100%;
+    padding: 0;
+    background: #141414;
+}
+
+.about .row 
+{
+    width: 100%;
+    display: flex;
+    gap: 0;
+}
+.about .col 
+{
+    height: 100vh;
+}
+
+.about .col-1 
+{
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 0.5px #ccc;
+}
+.about .col-1 p 
+{
+    color: #f2eeee;
+    text-transform: uppercase;
+    font: .85rem 'Montserrat';
+    writing-mode: vertical-rl; 
+    text-orientation: upright; 
+    white-space: nowrap; 
+    letter-spacing: 1px;
+}
+
+.about .row .col-2 
+{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.about .col-2 .cont
+{
+    width: 45%;
+    height: 400px;
+}
+
+.about .cont img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .cont figcaption
+{
+    font-size: 2rem;
+    font-family: 'Recharge';
+    color: #fff;
+}
+
+.about .col-3 
+{
+    width: 53%;
+    background-image: url('https://i.pinimg.com/564x/32/40/88/324088d1c43dbd568be2d5ab7cb8967b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    box-shadow: 0 0 0 0.5px #ccc;
+}
+
+
+
+/* tour */
+.tour 
+{
+    width: 100%;
+    padding: 0;
+    background: #141414;
+}
+.tour .row 
+{
+    width: 100%;
+    display: flex;
+    gap: 0;
+}
+.tour .col 
+{
+    position: relative;
+}
+
+.tour .col-1, 
+.tour .col-2
+{
+    height: 100vh;
+    width: 47%;
+}
+.tour .col-3 
+{
+    width: 6%;
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tour .col-3 .text p
+{
+    color: #fbf3f3;
+    text-transform: uppercase;
+    font: 500 .85rem 'Montserrat';
+    writing-mode: vertical-rl; 
+    text-orientation: upright; 
+    white-space: nowrap; 
+    letter-spacing: 1px;
+}
+
+.tour .row .col .location 
+{
+    padding: 1.5em 2em;
+    background: #080707;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.col .location p 
+{
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tour .col .link 
+{
+    background: #080707;
+    padding: 1.8em 2.2em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tour .row .col .link-1, 
+.tour .row .col .link-2 
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.tour .col img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.tour .col .link img 
+{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/* tour carousel */
+.tour-section
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+}
+.carousel
+{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+
+.carousel .list .item
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.carousel .list .item img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.carousel .list .item .content
+{
+    position: absolute;
+    top: 10%;
+    margin: 0 2em;
+    padding: 2em 0;
+    text-shadow: 0 5px 10px #0004;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+}
+
+.carousel .list .item .title 
+{
+    font-family: 'Recharge';
+    font-size: 2.8rem;
+    color: transparent;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    -webkit-text-stroke: 1px #fff;
+}
+.carousel .list .item .topic{
+    font-family: 'Kanit';
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+.carousel .list .item .des
+{
+    font-family: 'Montserrat';
+    font-size: .9rem;
+    padding: 1em 10%;
+}
+
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 1em;
+}
+
+.thumbnail .item{
+    width: 180px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: grayscale(100%);
+}
+
+.thumbnail .item .content
+{
+    position: absolute;
+    bottom: -1px;
+    border-radius: 0px 0px 10px 10px;
+    padding: .5em;
+    font-weight: 600;
+    background-color: rgba(2, 5, 11, 0.7);
+    width: 100%;
+}
+.thumbnail .item .content .title
+{
+    font-family: 'Cinzel';
+    font-size: 1.1rem;
+}
+.thumbnail .item .content .description
+{
+    font-family: 'Montserrat';
+    font-size: .8rem;
+}
+
+/* arrows */
+.arrows
+{
+    display: none;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+/* animation text in first item */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+
+/* running time */
+.carousel .time
+{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+.carousel.next .time,
+.carousel.prev .time
+{
+    animation: runningTime 3s linear 1 forwards;
+}
+
+/* tour recap */
+.tour-recap 
+{
+    width: 100%;
+    padding: 3em 0;
+}
+.tour-recap h2 
+{
+    font: 600 1.2rem 'Montserrat';
+    color: #fff;
+    text-align: center;
+    margin-top: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tour-recap .row 
+{
+    width: 100%;
+    padding: 3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.tour-recap .col 
+{
+    width: calc(100vw / 3.5 );
+    height: 500px;
+    border: 1px solid #ccc;
+}
+
+.tour-recap img 
+{
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.tour-recap figcaption 
+{
+    font: 1.2rem 'Recharge';
+    color: #fff;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.tour-recap img:hover 
+{
+    filter: none;
+}
+
+/* about (webpage) */
+.bg-cover 
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/14644494/pexels-photo-14644494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-cover .main-txt 
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-txt h2 
+{
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    color: transparent;
+    align-self: center;
+    -webkit-text-stroke: 1px #fff;
+}
+.main-txt span 
+{
+    width: 25%;
+    height: 25px;
+    background-color: rgba(226, 230, 235, 0.229);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+
+
+/* mini gallery */
+.gallery 
+{
+    width: 100%;
+    padding: 3em 0;
+}
+
+.gallery p 
+{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2em;
+    color: #fff;
+    text-transform: uppercase;
+}
+.gallery .row 
+{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.gallery .col img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.gallery .col img:hover 
+{
+    filter: grayscale(10%);
+}
+
+.gallery .col-1, 
+.gallery .col-5
+{
+    height: 220px;
+    width: 200px;
+}
+.gallery .col-2, 
+.gallery .col-4 
+{
+    height: 320px;
+    width: 250px;
+}
+.gallery .col-3 
+{
+    height: 450px;
+    width: 300px;
+}
+
+
+
+/* bio */
+.bio 
+{
+    width: 100%;
+    padding: 3em 0;
+    box-shadow: 0 0 0 0.5px #ccc;
+}
+.bio h2 
+{
+    text-align: center;
+    margin-top: 2em;
+    color: #fff;
+    font: 600 1.3rem 'Montserrat';
+    text-transform: uppercase;
+}
+
+.bio .collab p 
+{
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: .9rem;
+}
+
+.bio .write-up 
+{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    text-align: center;
+    padding-bottom: 3em;
+}
+.bio .write-up p 
+{
+    font-size: .8rem;
+    font-family: 'Graflows';
+    font-weight: lighter;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+/* image slider */
+.image-slider 
+{
+    width: 100vw;
+    height: 100vh;
+}
+.slider-wrapper 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider 
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slider .cont
+{
+    position: relative;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider .cont img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.slider .cont .slide-title {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    color: #fff; 
+    z-index: 2;
+    font-size: 5rem; 
+    font-family: 'Cinzel';
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.slider .cont .slide-title::before,
+.slider .cont .slide-title::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px; 
+    background-color: #fff; 
+}
+
+.slider-nav 
+{
+    display: flex;
+    column-gap: 1rem;
+    position: relative;
+    bottom: 2.5em;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+.slider-nav a 
+{
+    width: 30px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    border-radius: 20px;
+}
+.slider-nav a:visited 
+{
+    border: 2px solid #fff;
+}

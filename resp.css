@@ -1,0 +1,426 @@
+
+@media (max-width: 1200px)
+{
+    /* nav sections */
+    .site-nav 
+    {
+        box-shadow: 0 0 0 0.5px #ccc;
+    }
+    .site-nav section 
+    {
+        border-right: none;
+    }
+    .site-nav section:nth-child(2)
+    {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+
+    /* about */
+    .about .col-1 p 
+    {
+        font-size: .8rem;
+    }
+    .about .col figcaption
+    {
+        font-size: 1.5rem;
+    } 
+
+    .about .row .col-2 
+    {
+        gap: .5em;
+        width: 45%;
+    }
+    .about .row .col-3 
+    {
+        width: 48%;
+    }
+
+    /* bio */
+    .bio .collab p 
+    {
+        font-size: .8rem;
+    }
+    .bio .write-up p 
+    {
+        font-size: .7rem;
+        padding: 0 2em;
+    }
+
+
+    /* tour recap */
+    .tour-recap .col 
+    {
+        height: 420px;
+    }
+}
+
+
+@media ( max-width: 900px )
+{
+    /* website navigation */
+    .site-nav a 
+    {
+        font-size: .7rem;
+    }
+    .site-nav .logo 
+    {
+        font-size: .9rem;
+    }
+    .site-nav img 
+    {
+        width: 25px;
+        height: 20px;
+    }
+
+
+    /* about */
+    .about .col-2 .cont
+    {
+        height: 270px;
+        width: 70%;
+    }
+    .about .col-2 .cont figcaption
+    {
+       margin-top: -15%;
+       margin-left: .5em;
+    }
+
+    .about .row .col-2 
+    {
+        width: 45%;
+        gap: 1em;
+        flex-direction: column;
+    }
+    .about .row .col-3 
+    {
+        width: 53%;
+    }
+
+
+    /* tours */
+    .tour .row 
+    {
+        flex-wrap: wrap;
+    }
+    .tour .row .col-1, 
+    .tour .row .col-2 
+    {
+        width: 50%;
+    }
+
+    .tour .col .link 
+    {
+        padding: 1.5em 2em;
+    }
+    .col .location p 
+    {
+        font-size: 1.5rem;
+    }
+
+    .tour .row .col-3 
+    {
+        width: 100%;
+        height: 10vh;
+    }
+    .tour .row .col-3 .text p 
+    {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        white-space: normal;
+    }
+
+
+    /* tour recap */
+    .tour-recap .row
+    {
+        gap: .5em;
+    }
+    .tour-recap .col 
+    {
+        width: 250px;
+        height: 350px;
+        border: 1px solid #9d846a;
+    }
+    
+
+    /* bio */
+    .bio .write-up .br  
+    {
+        display: none;
+    }
+    .bio .write-up p 
+    {
+        font-size: .6rem;
+        padding: 0 5em;
+    }
+    .bio .socials p 
+    {
+        font-size: .7rem;
+    }
+}
+
+
+@media ( max-width: 800px )
+{
+    /* custom cursor*/
+    .cursor 
+    {
+        display: none;
+    }
+
+    
+    /* tour recap */
+    .tour-recap .row
+    {
+        gap: .5em;
+    }
+    .tour-recap .col 
+    {
+        width: 240px;
+        height: 330px;
+        border: 1px solid #9d6a6a;
+    }
+
+
+    /* about */
+    .main-txt span 
+    {
+        width: 50%;
+        height: 25px;
+        background-color: rgba(15, 16, 17, 0.891);
+    }
+
+    .gallery p 
+    {
+        padding: 1em 3em;
+    }
+    .gallery br 
+    {
+        display: none;
+    }
+
+    .gallery .row 
+    {
+        flex-wrap: wrap;
+        padding-top: 3em;
+    }
+}
+
+
+@media ( max-width: 700px )
+{
+
+    /* about */
+    .about .col-2 .cont
+    {
+        width: 75%;
+    }
+    .about .col-2 .cont figcaption
+    {
+       margin-top: -17%;
+    }
+
+    .about .row .col-2 
+    {
+        width: 42%;
+    }
+    .about .row .col-3 
+    {
+        width: 51%;
+    }
+
+
+    /* about */
+    .main-txt h2 
+    {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media ( max-width: 600px )
+{
+    /* website navigation */
+    .site-nav section 
+    {
+        height: 65px;
+    }
+
+    .site-nav section:nth-child(1){
+        display: none;
+    }
+    .site-nav section:nth-child(2){
+        width: 35%;
+    }
+    .site-nav section:nth-child(3){
+        width: 65%;
+    }
+
+
+    /* about */
+    .about .row 
+    {
+        flex-direction: column;
+    }
+    .about .row .col 
+    {
+        width: 100%;
+    }
+
+    .about .row .col-1 
+    {
+        height: 10vh;
+    }
+    .about .col-1 p 
+    {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        white-space: normal;
+    }
+
+    .about .row .col-2 
+    {
+        height: 100vh;
+        flex-direction: row;
+    }
+    .about .row .col-2 .cont 
+    {
+        width: 45%;
+        height: 400px;
+    }
+
+
+    /* bio */
+    .bio h2 
+    {
+        padding: 0 3em;
+    }
+
+
+    /* tours */
+    .tour .row 
+    {
+        flex-direction: column;
+    }
+    .tour .row .col 
+    {
+        width: 100%;
+    }
+
+
+    /* tour carousel */
+    .carousel .list .item .title 
+    {
+        font-size: 2rem;
+    }
+    .carousel .list .item .topic
+    {
+        font-size: 1.5rem;
+    }
+    .carousel .list .item .des
+    {
+        font-size: .75rem;
+        padding: 1em 6%;
+    }
+
+
+    /* image slider */
+    .slider .cont .slide-title 
+    {
+        font-size: 4rem; 
+        gap: 1rem;
+    }
+    .slider .cont .slide-title::before,
+    .slider .cont .slide-title::after 
+    {
+        width: 50px;
+    }
+}
+
+
+@media ( max-width: 450px )
+{
+    /* about */
+    .about .row .col-2 
+    {
+        flex-direction: column;
+        height: 120vh;
+        margin: 2em 0;
+    }
+    .about .row .col-2 .cont 
+    {
+        width: 80%;
+        height: 350;
+    }
+
+
+    /* about */
+    .main-txt h2 
+    {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+
+    /* about */
+    .gallery p 
+    {
+        padding: 1em 3em;
+    }
+    .gallery br 
+    {
+        display: none;
+    }
+
+    .gallery .row 
+    {
+        flex-wrap: wrap;
+        padding-top: 3em;
+    }
+
+
+    /* about */
+    .gallery p 
+    {
+        padding: 0em 2em;
+    }
+    .gallery .row .col 
+    {
+        width: 90%;
+        height: 400px;
+    }
+
+
+    /* bio */
+    .bio h2 
+    {
+        padding: 0 1.5em;
+        font-size: 1.7rem;
+    }
+    .bio .write-up 
+    {
+        margin-top: 15%;
+    }
+    .bio .write-up p 
+    {
+        font-size: .7rem;
+        padding: 0 2em;
+    }
+
+
+    /* tour recap */
+    .tour-recap .row
+    {
+        gap: 1em;
+        flex-direction: column;
+    }
+    .tour-recap .col 
+    {
+        width: 90%;
+        height: 500px;
+        border: 1px solid #9d6a6a;
+    }
+
+}

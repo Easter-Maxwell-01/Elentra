@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- site config -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- site titel -->
+        <title> E L E N T R A - I T A L Y - T O U R </title>
+
+        <!-- css files -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="resp.css">
+        <link rel="stylesheet" href="anim.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="progress-container">
+                <div class="progress" id="progress">0%</div>
+            </div>
+        </div>
+
+        <!-- custom cursor -->
+        <div class='cursor'></div>
+        <div class='cursor second-cursor'></div>
+
+        <!-- tours -->
+        <section class="tour-section">
+            
+            <!-- Italy tour carousel -->
+            <div class="carousel" id="italy">
+                <!-- list item -->
+                <div class="list">
+                    <div class="item">
+                        <img src="assets/abt-1.jpeg">
+                        <div class="content">
+                            <div class="title">Fashion Tour I</div>
+                            <div class="topic">Italy</div>
+                            <div class="des">
+                                Discover creativity like no other. Explore a work of art that binds the fortresses of passion, dedication and patience
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-2.jpg">
+                        <div class="content">
+                            <div class="title">Fashion Tour II</div>
+                            <div class="topic">Italy</div>
+                            <div class="des">
+                                Discover creativity like no other. Explore a work of art that binds the fortresses of passion, dedication and patience
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-3.jpeg">
+                        <div class="content">
+                            <div class="title">Fashion Tour III</div>
+                            <div class="topic">Italy</div>
+                            <div class="des">
+                                Discover creativity like no other. Explore a work of art that binds the fortresses of passion, dedication and patience
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-4.jpeg">
+                        <div class="content">
+                            <div class="title">Fashion Tour IV</div>
+                            <div class="topic">Italy</div>
+                            <div class="des">
+                                Discover creativity like no other. Explore a work of art that binds the fortresses of passion, dedication and patience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- list thumnail -->
+                <div class="thumbnail">
+                    <div class="item">
+                        <img src="assets/abt-1.jpeg">
+                        <div class="content">
+                            <div class="title">
+                                Tour I
+                            </div>
+                            <div class="description">
+                                Milan, Italy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-2.jpg">
+                        <div class="content">
+                            <div class="title">
+                                Tour II
+                            </div>
+                            <div class="description">
+                                Rome, Italy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-3.jpeg">
+                        <div class="content">
+                            <div class="title">
+                                Tour III
+                            </div>
+                            <div class="description">
+                                Florence, Italy
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/abt-4.jpeg">
+                        <div class="content">
+                            <div class="title">
+                                Tour IV
+                            </div>
+                            <div class="description">
+                                Venice, Italy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- next prev -->
+                <div class="arrows">
+                    <button id="prev"></button>
+                    <button id="next"></button>
+                </div>
+
+                <!-- time running -->
+                <div class="time"></div>
+            </div>
+        </section>
+
+        <!-- tour recap -->
+        <section class="tour-recap">
+            <h2> Tour Collection </h2>
+            <div class="row">
+                <div class="col reveal">
+                    <img src="assets/t-recap-1.jpg" alt="">
+                    <figcaption> 01 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/abt-1.jpeg" alt="">
+                    <figcaption> 02 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-2.jpg" alt="">
+                    <figcaption> 03 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-3.jpg" alt="">
+                    <figcaption> 04 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-4.jpg" alt="">
+                    <figcaption> 05 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-5.jpg" alt="">
+                    <figcaption> 06 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-6.jpg" alt="">
+                    <figcaption> 07 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-7.jpg" alt="">
+                    <figcaption> 08 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-8.jpg" alt="">
+                    <figcaption> 09 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-9.jpg" alt="">
+                    <figcaption> 10 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-10.jpg" alt="">
+                    <figcaption> 11 </figcaption>
+                </div>
+                <div class="col reveal">
+                    <img src="assets/t-recap-11.jpg" alt="">
+                    <figcaption> 12 </figcaption>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
